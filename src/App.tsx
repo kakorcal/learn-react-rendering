@@ -9,6 +9,10 @@ interface IAppProps extends ConnectedProps<typeof connector> {
 const App: React.FC<IAppProps> = ({ volume, tune }) => {
   const classNames = cx();
 
+  React.useEffect(() => {
+    tune(300);
+  }, []);
+
   return (
     <h1 className={classNames.heading}>
       {volume}

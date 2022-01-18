@@ -1,4 +1,6 @@
 import { createStore } from 'redux';
+import { devToolsEnhancer } from 'redux-devtools-extension';
+
 import rootReducer, { RootState } from './rootReducer';
 import rootActions from './rootActions';
 
@@ -14,6 +16,8 @@ export const INITIAL_ROOT_STATE: RootState = {
     volume: 50,
   },
 };
+
+const devtools = process.env.NODE_ENV === 'development' ? devToolsEnhancer({}) : undefined;
  
-export const store = createStore(rootReducer, INITIAL_ROOT_STATE);
+export const store = createStore(rootReducer, INITIAL_ROOT_STATE, devtools);
 
