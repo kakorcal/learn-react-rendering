@@ -17,6 +17,7 @@ export const INITIAL_ROOT_STATE: RootState = {
   },
 };
 
+// https://github.com/zalmoxisus/redux-devtools-extension#13-use-redux-devtools-extension-package-from-npm
 const devtools = process.env.NODE_ENV === 'development' ? devToolsEnhancer({}) : undefined;
  
 export const store = createStore(rootReducer, INITIAL_ROOT_STATE, devtools);
