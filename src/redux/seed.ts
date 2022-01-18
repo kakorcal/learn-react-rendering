@@ -1,4 +1,20 @@
-const tracks = [
+export interface Track {
+  id: number,
+  title: string;
+  description: string | null;
+  artist: string;
+  album: string | null;
+  art: string;
+  audio: string;
+  duration: string;
+  instrumental: boolean;
+  explicit: 'radio-safe' | null;
+  genres: string | null;
+  releaseDate: string;
+  url: string;
+}
+
+export const tracks: Track[] = [
   {
     id: 1,
     title: 'Everybody Keep Running (EDM / Instrumental)',
