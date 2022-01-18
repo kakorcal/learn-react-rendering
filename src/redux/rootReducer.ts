@@ -8,5 +8,4 @@ export type RootState = {
 
 export default combineReducers({
   playback: playbackReducer,
-});;
-
+});
