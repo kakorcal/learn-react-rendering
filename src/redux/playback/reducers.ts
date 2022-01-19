@@ -26,4 +26,4 @@ export default createReducer<PlaybackState, PlaybackActions>(INITIAL_STATE)
       ...state,
       volume: action.payload.id,
     };
-  })
+  });
