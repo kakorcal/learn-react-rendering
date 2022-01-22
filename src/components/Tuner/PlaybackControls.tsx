@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PlaybackControls: React.FC = () => {
-    return null;
+  return null;
 };
 
 export default PlaybackControls;

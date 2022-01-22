@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProgressBar: React.FC = () => {
-    return null;
+  return null;
 };
 
 export default ProgressBar;

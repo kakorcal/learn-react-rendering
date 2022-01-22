@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { actions, State } from './redux';
+import Image from './components/Image';
 
 // TODO: remove all of this below
 interface IAppProps extends ConnectedProps<typeof connector> {
@@ -14,9 +15,12 @@ const App: React.FC<IAppProps> = ({ volume, tune }) => {
   }, []);
 
   return (
-    <h1 className={classNames.heading}>
-      {volume}
-    </h1>
+    <>
+      <h1 className={classNames.heading}>
+        {volume}
+      </h1>
+      <Image width={500} height={500} />
+    </>
   );
 }
 
