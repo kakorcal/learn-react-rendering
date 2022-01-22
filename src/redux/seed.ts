@@ -1,4 +1,8 @@
-import { Track } from '../types';
+import { Track, SortType } from '../types';
+
+export const name = 'My Playlist';
+export const currentSortType: SortType = 'DATE-ADDED-NEWEST';
+export const sortTypes: SortType[] = ['DATE-ADDED-NEWEST', 'DATE-ADDED-OLDEST', 'ALPHABETICAL'];
 
 export const tracks: Track[] = [
   {

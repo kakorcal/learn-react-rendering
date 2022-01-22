@@ -8,7 +8,7 @@ export const selectAnnotations = (state: State) => {
   return state.tracks.annotations;
 };
 
-export const selectSortType = (state: State) => {
-  return state.tracks.sortType;
+export const selectCurrentSortType = (state: State) => {
+  return state.tracks.currentSortType;
 };
 
