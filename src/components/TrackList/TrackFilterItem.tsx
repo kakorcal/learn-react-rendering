@@ -1,31 +1,28 @@
 import React from 'react';
-import { connect, ConnectedProps } from 'react-redux';
 
 import { SortType } from '../../types'
-import { State, actions } from '../../redux';
+import { toFormattedSortType } from '../../utils';
 
-interface ITrackListItemProps extends ConnectedProps<typeof connector> {
+interface ITrackListItemProps {
   sortType: SortType;
+  onClick: (sortType: SortType) => void;
 }
 
-const TrackFilterItem: React.FC<ITrackListItemProps> = ({ sort, sortType, currentSortType }) => {
-  const onClick = () => {
-    if (sortType !== currentSortType) {
-      sort(sortType);
-    }
-  };
+const TrackFilterItem: React.FC<ITrackListItemProps> = ({ sortType, onClick }) => {
+  const classNames = styles();
 
   return (
-    <button onClick={onClick}>{sortType === currentSortType ? `CURRENT ${sortType}` : sortType}</button>
+    <button className={classNames.root} onClick={() => onClick(sortType)}>
+      {toFormattedSortType(sortType)}
+    </button>
   );
 };
 
-const connector = connect((state: State) => {
-  return { 
-    currentSortType: state.tracks.currentSortType,
+const styles = () => {
+  return {
+    root: 'text-lg',
   };
-}, {
-  sort: actions.tracks.sort,
-});
+};
 
-export default connector(TrackFilterItem);
+
+export default TrackFilterItem;

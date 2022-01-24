@@ -22,19 +22,31 @@ import TrackItem from './TrackItem';
 import TrackFilter from './TrackFilter';
 
 const TrackList: React.FC<ConnectedProps<typeof connector>> = ({ name, trackIds }) => {
+  const classNames = styles();
+
   return (
-    <div>
-      <div className='flex justify-between'>
-        <h2>{name}</h2>
-        <div>
+    <div className={classNames.root}>
+      <div className={classNames.titleSection}>
+        <h2 className={classNames.title}>{name}</h2>
+        <div className={classNames.filterSection}>
           <TrackFilter />
         </div>
       </div>
-      <ul>
-        {trackIds.map((trackId) => <li><TrackItem key={trackId} id={trackId} /></li>)}
-      </ul>
+      <ol className={classNames.listSection}>
+        {trackIds.map((trackId) => <li key={trackId}><TrackItem id={trackId} /></li>)}
+      </ol>
     </div>
   );
+};
+
+const styles = () => {
+  return {
+    root: 'w-full',
+    titleSection: 'flex justify-between items-center',
+    title: 'm-0',
+    filterSection: 'm-0',
+    listSection: 'w-full',
+  };
 };
 
 const connector = connect((state: State) => {

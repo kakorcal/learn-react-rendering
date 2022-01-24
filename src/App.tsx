@@ -72,9 +72,9 @@ const App: React.FC = () => {
 
 const styles = () => {
   return {
-    root: 'w-full bg-slate-800 pb-5 prose prose-2xl prose-invert max-w-none',
-    nav: 'w-full bg-blue-800',
-    main: 'w-full'
+    root: 'w-full bg-slate-200 dark:bg-slate-900 prose prose-slate dark:prose-invert prose-2xl max-w-none transition-colors',
+    nav: 'w-full sticky top-0 bg-blue-200 dark:bg-blue-800 transition-colors',
+    main: 'w-full py-9'
   };
 };
 

@@ -1,3 +1,5 @@
+export type Theme = 'LIGHT' | 'DARK';
+
 export interface Track {
   id: string;
   title: string;
