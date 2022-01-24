@@ -15,29 +15,36 @@ const TrackItem: React.FC<ITrackItemProps & ConnectedProps<typeof connector>> = 
   duration,
   url,
 }) => {
+  const classNames = styles();
+
   return (
-    <div>
-      <div>
-        <img src={art} alt={title} />
+    <div className={classNames.root}>
+      <div className={classNames.imageSection}>
+        <img className={classNames.image} src={art} alt={title} />
       </div>
-      <div>
-        <div><a href={url} target={'_blank'} rel={'noreferrer'}>{title}</a></div>
-        <div>
-          <span>{artist}</span>{album && <span> • {album}</span>}
+      <div className={classNames.contentSection}>
+        <div className={classNames.texts}>
+          <a className={classNames.title} href={url} target={'_blank'} rel={'noreferrer'}>{title}</a>
+          <div className={classNames.subtitle}><span>{artist}</span>{album && <span> • {album}</span>}</div>
         </div>
-      </div>
-      <div>
-        <span>{duration}</span>
+        <div className={classNames.duration}>{duration}</div>
       </div>
     </div>
   );
 };
 
-// const classNames = () => {
-//   return {
-
-//   };
-// };
+const styles = () => {
+  return {
+    root: 'flex items-center',
+    imageSection: 'max-w-[3rem]',
+    image: 'm-0 rounded overflow-hidden',
+    contentSection: 'flex items-center w-full ml-5',
+    texts: 'flex-1 flex flex-col justify-center',
+    title: 'text-lg',
+    subtitle: 'text-sm',
+    duration: 'text-sm',
+  };
+};
 
 const connector = connect((state: State, ownProps: ITrackItemProps) => {
   return state.tracks.annotations[ownProps.id]; 

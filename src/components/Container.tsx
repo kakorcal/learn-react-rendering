@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Container: React.FC = ({ children }) => {
-  const classNames = styles();
+const Navbar: React.FC = ({ children }) => {
+  const classNames = navbarStyles();
 
   return (
     <div className={classNames.root}>
@@ -10,10 +10,29 @@ const Container: React.FC = ({ children }) => {
   );
 };
 
-const styles = () => {
+const navbarStyles = () => {
   return {
-    root: 'max-w-5xl mx-auto',
+    root: 'max-w-6xl mx-auto',
   };
 };
 
-export default Container;
+const Main: React.FC = ({ children }) => {
+  const classNames = mainStyles();
+
+  return (
+    <div className={classNames.root}>
+      {children}
+    </div>
+  );
+};
+
+const mainStyles = () => {
+  return {
+    root: 'max-w-6xl mx-auto grid grid-cols-[5fr_2fr] gap-8',
+  };
+};
+
+export default {
+  Navbar,
+  Main,
+};

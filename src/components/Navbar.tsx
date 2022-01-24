@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
 const styles = () => {
   return {
     root: 'flex justify-between py-3',
-    logo: 'text-3xl',
+    logo: 'text-3xl font-bold',
     themeButton: 'min-w-[2rem]',
   };
 };

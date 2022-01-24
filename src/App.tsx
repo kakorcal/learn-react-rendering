@@ -49,6 +49,7 @@ import React from 'react';
 
 import Container from './components/Container';
 import Navbar from './components/Navbar';
+import Tuner from './components/Tuner/Tuner';
 import TrackList from './components/TrackList/TrackList';
 
 const App: React.FC = () => {
@@ -56,15 +57,16 @@ const App: React.FC = () => {
 
   return (
     <div className={classNames.root}>
-      <div className={classNames.nav}>
-        <Container>
+      <header className={classNames.header}>
+        <Container.Navbar>
           <Navbar />
-        </Container>
-      </div>
+        </Container.Navbar>
+      </header>
       <main className={classNames.main}>
-        <Container>
+        <Container.Main>
           <TrackList />
-        </Container>
+          <Tuner />
+        </Container.Main>
       </main>
     </div>
   );
@@ -73,8 +75,8 @@ const App: React.FC = () => {
 const styles = () => {
   return {
     root: 'w-full bg-slate-200 dark:bg-slate-900 prose prose-slate dark:prose-invert prose-2xl max-w-none transition-colors',
-    nav: 'w-full sticky top-0 bg-blue-200 dark:bg-blue-800 transition-colors',
-    main: 'w-full py-9'
+    header: 'w-full sticky z-10 top-0 bg-blue-200 dark:bg-blue-800 transition-colors',
+    main: 'w-full py-12'
   };
 };
 

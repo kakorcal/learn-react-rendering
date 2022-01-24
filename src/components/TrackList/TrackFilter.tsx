@@ -51,7 +51,7 @@ const styles = () => {
     sortByButton: 'flex justify-center items-center bg-slate-300 hover:bg-slate-400 dark:bg-slate-700 dark:hover:bg-slate-800 rounded pl-2 py-1 ml-auto',
     sortByText: 'text-lg',
     sortByIcon: 'min-w-[2rem]',
-    sortList: 'absolute mt-5 top-[100%] -right-2 list-none p-0 rounded overflow-hidden drop-shadow-xl w-full bg-slate-200 dark:bg-slate-600',
+    sortList: 'absolute mt-5 top-[100%] -right-2 list-none p-0 rounded overflow-hidden drop-shadow-xl w-full bg-slate-200 dark:bg-slate-600 border border-slate-500',
     sortListItem: 'flex m-0 p-0 w-full py-2 px-5 hover:bg-slate-400 dark:hover:bg-slate-800',
     sortListItemSelected: 'flex m-0 p-0 w-full py-2 px-5 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 dark:hover:bg-slate-800',
   };
