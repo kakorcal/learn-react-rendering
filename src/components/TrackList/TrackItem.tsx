@@ -36,9 +36,9 @@ const TrackItem: React.FC<ITrackItemProps & ConnectedProps<typeof connector>> = 
 const styles = () => {
   return {
     root: 'flex items-center',
-    imageSection: 'max-w-[3rem]',
+    imageSection: 'max-w-[4rem]',
     image: 'm-0 rounded overflow-hidden',
-    contentSection: 'flex items-center w-full ml-5',
+    contentSection: 'flex items-center w-full ml-2',
     texts: 'flex-1 flex flex-col justify-center',
     title: 'text-lg',
     subtitle: 'text-sm',
