@@ -5,17 +5,21 @@ import { State } from '../../redux';
 
 import TrackFilterItem from './TrackFilterItem';
 
-const TrackFilter: React.FC<ConnectedProps<typeof connector>> = ({ sortTypes }) => {
+const TrackFilter: React.FC<ConnectedProps<typeof connector>> = ({ sortTypes, currentSortType }) => {
   return (
-    <ul>
-      {sortTypes.map((sortType) => <li><TrackFilterItem key={sortType} sortType={sortType} /></li>)}
-    </ul>
+    <div>
+      <button>Sort: {currentSortType}</button>
+      <ul>
+        {sortTypes.map((sortType) => <li><TrackFilterItem key={sortType} sortType={sortType} /></li>)}
+      </ul>
+    </div>
   );
 };
 
 const connector = connect((state: State) => {
   return { 
     sortTypes: state.tracks.sortTypes,
+    currentSortType: state.tracks.currentSortType,
   };
 });
 

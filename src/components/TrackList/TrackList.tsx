@@ -24,7 +24,7 @@ import TrackFilter from './TrackFilter';
 const TrackList: React.FC<ConnectedProps<typeof connector>> = ({ name, trackIds }) => {
   return (
     <div>
-      <div>
+      <div className='flex justify-between'>
         <h2>{name}</h2>
         <div>
           <TrackFilter />

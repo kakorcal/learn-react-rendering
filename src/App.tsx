@@ -47,20 +47,35 @@ import React from 'react';
 // import List from './components/List/List';
 // import TrackItem from './components/TrackItem';
 
+import Container from './components/Container';
 import Navbar from './components/Navbar';
 import TrackList from './components/TrackList/TrackList';
 
 const App: React.FC = () => {
+  const classNames = styles();
+
   return (
-    <div>
-      <div>
-        <Navbar />
+    <div className={classNames.root}>
+      <div className={classNames.nav}>
+        <Container>
+          <Navbar />
+        </Container>
       </div>
-      <div>
-        <TrackList />
-      </div>
+      <main className={classNames.main}>
+        <Container>
+          <TrackList />
+        </Container>
+      </main>
     </div>
   );
+};
+
+const styles = () => {
+  return {
+    root: 'w-full bg-slate-800 pb-5 prose prose-2xl prose-invert max-w-none',
+    nav: 'w-full bg-blue-800',
+    main: 'w-full'
+  };
 };
 
     // <List>
