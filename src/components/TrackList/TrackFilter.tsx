@@ -49,8 +49,8 @@ const TrackFilter: React.FC<ConnectedProps<typeof connector>> = ({ sort, sortTyp
 const styles = () => {
   return {
     root: 'relative min-w-[13rem]',
-    sortByButton: 'flex justify-center items-center bg-slate-300 hover:bg-slate-400 dark:bg-slate-700 dark:hover:bg-slate-800 rounded pl-3 pr-2 py-1 ml-auto',
-    sortByText: 'text-lg',
+    sortByButton: 'flex justify-center items-center bg-slate-300 hover:bg-slate-400 dark:bg-slate-700 dark:hover:bg-slate-800 rounded pl-3 pr-1 py-1 ml-auto',
+    sortByText: 'text-base',
     sortByIcon: 'min-w-[2rem]',
     sortList: 'absolute mt-3 top-[100%] -right-2 list-none p-0 rounded overflow-hidden drop-shadow-xl w-full bg-slate-200 dark:bg-slate-600',
     sortListItem: 'flex m-0 p-0 w-full py-2 pl-4 pr-3 hover:bg-slate-400 dark:hover:bg-slate-800',

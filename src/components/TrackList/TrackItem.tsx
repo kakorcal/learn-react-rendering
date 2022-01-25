@@ -2,6 +2,7 @@ import React from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 
 import { State } from '../../redux';
+import Image from '../Image';
 import TrackPlayButton from './TrackPlayButton';
 
 interface ITrackItemProps {
@@ -23,7 +24,7 @@ const TrackItem: React.FC<ITrackItemProps & ConnectedProps<typeof connector>> = 
   return (
     <div className={classNames.root}>
       <div className={classNames.imageSection}>
-        <img className={classNames.image} src={art} alt={title} />
+        <Image className={classNames.image} src={art} alt={title} />
         <div className={classNames.playButtonSection}>
           <TrackPlayButton />
         </div>
