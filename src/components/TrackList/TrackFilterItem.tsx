@@ -20,7 +20,7 @@ const TrackFilterItem: React.FC<ITrackListItemProps> = ({ sortType, onClick }) =
 
 const styles = () => {
   return {
-    root: 'w-full text-lg text-left',
+    root: 'w-full text-base text-left',
   };
 };
 

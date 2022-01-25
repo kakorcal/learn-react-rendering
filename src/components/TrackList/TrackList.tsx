@@ -51,7 +51,7 @@ const styles = () => {
     root: 'w-full',
     titleSection: 'flex justify-between items-center',
     title: 'm-0',
-    horizontalLine: 'mt-5 mb-3 border border-slate-500/30',
+    horizontalLine: 'mt-4 mb-7 border border-orange-500 dark:border-yellow-500', // border-slate-500/30
     filterSection: 'm-0',
     listSection: 'w-full list-none p-0',
     listItem: 'my-2 p-2 px-3 rounded overflow-hidden hover:bg-slate-300 dark:hover:bg-slate-700',

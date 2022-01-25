@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
     <nav className={classNames.root}>
       <div className={classNames.logo}>SXM+P</div>
       <button className={classNames.themeButton} type='button' onClick={() => setTheme(theme === 'LIGHT' ? 'DARK' : 'LIGHT')}>
-        {theme === 'LIGHT' ? <Sun /> : <Moon />}
+        {theme === 'LIGHT' ? <Sun className={classNames.sunIcon} /> : <Moon className={classNames.moonIcon} />}
       </button>
     </nav>
   );
@@ -34,6 +34,8 @@ const styles = () => {
     root: 'flex justify-between py-3',
     logo: 'text-3xl font-bold',
     themeButton: 'min-w-[2rem]',
+    sunIcon: 'fill-orange-500',
+    moonIcon: 'fill-yellow-500',
   };
 };
 
