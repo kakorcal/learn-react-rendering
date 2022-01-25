@@ -57,17 +57,13 @@ const App: React.FC = () => {
 
   return (
     <div className={classNames.root}>
-      <header className={classNames.header}>
-        <Container.Navbar>
-          <Navbar />
-        </Container.Navbar>
-      </header>
-      <main className={classNames.main}>
-        <Container.Main>
-          <TrackList />
-          <Tuner />
-        </Container.Main>
-      </main>
+      <Container.Header>
+        <Navbar />
+      </Container.Header>
+      <Container.Main>
+        <TrackList />
+        <Tuner />
+      </Container.Main>
     </div>
   );
 };
@@ -75,8 +71,6 @@ const App: React.FC = () => {
 const styles = () => {
   return {
     root: 'w-full bg-slate-200 dark:bg-slate-900 prose prose-slate dark:prose-invert prose-2xl max-w-none transition-colors',
-    header: 'w-full sticky z-10 top-0 bg-blue-200 dark:bg-blue-800 transition-colors',
-    main: 'w-full py-12'
   };
 };
 

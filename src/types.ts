@@ -1,5 +1,7 @@
 export type Theme = 'LIGHT' | 'DARK';
 
+export type ContainerType = 'HEADER' | 'MAIN';
+
 export interface Track {
   id: string;
   title: string;
