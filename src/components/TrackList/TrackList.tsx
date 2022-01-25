@@ -34,7 +34,13 @@ const TrackList: React.FC<ConnectedProps<typeof connector>> = ({ name, trackIds 
       </div>
       <hr className={classNames.horizontalLine} />
       <ol className={classNames.listSection}>
-        {trackIds.map((trackId) => <li key={trackId} className={classNames.listItem}><TrackItem id={trackId} /></li>)}
+        {trackIds.map((trackId, index) => {
+          return (
+            <li key={trackId} className={classNames.listItem}>
+              <TrackItem id={trackId} trackPosition={index + 1} />
+            </li>
+          );
+        })}
       </ol>
     </div>
   );
@@ -48,7 +54,7 @@ const styles = () => {
     horizontalLine: 'mt-5 mb-3 border border-slate-500/30',
     filterSection: 'm-0',
     listSection: 'w-full list-none p-0',
-    listItem: 'my-2 p-2 pr-6 rounded overflow-hidden hover:bg-slate-300 dark:hover:bg-slate-700',
+    listItem: 'my-2 p-2 px-3 rounded overflow-hidden hover:bg-slate-300 dark:hover:bg-slate-700',
   };
 };
 

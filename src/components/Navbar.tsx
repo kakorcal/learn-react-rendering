@@ -7,7 +7,7 @@ import { Theme } from '../types';
 
 const Navbar: React.FC = () => {
   const classNames = styles();
-  const [theme, setTheme] = React.useState<Theme>('LIGHT');
+  const [theme, setTheme] = React.useState<Theme>('DARK');
 
   React.useEffect(() => {
     if (theme === 'LIGHT') {
@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
     <nav className={classNames.root}>
       <div className={classNames.logo}>SXM+P</div>
       <button className={classNames.themeButton} type='button' onClick={() => setTheme(theme === 'LIGHT' ? 'DARK' : 'LIGHT')}>
-        {theme === 'LIGHT' ? <Sun />: <Moon />}
+        {theme === 'LIGHT' ? <Sun /> : <Moon />}
       </button>
     </nav>
   );
