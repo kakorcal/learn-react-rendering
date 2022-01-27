@@ -4,9 +4,13 @@ import { Provider } from 'react-redux';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { store } from './redux';
+import Redux from './redux';
 
 import './index.css';
+
+const store = Redux.initializeStore();
+
+Redux.initializeSagas();
 
 ReactDOM.render(
   <React.StrictMode>
