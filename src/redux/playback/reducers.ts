@@ -5,7 +5,7 @@ import * as actions from './actions';
 export type PlaybackActions = ActionType<typeof actions>;
 
 export interface PlaybackState {
-  id: number | null;
+  id: string | null;
   status: 'PLAYING' | 'PAUSED' | 'LOADING' | 'NO_SOURCE';
   currentTime: number;
   endTime: number;
@@ -24,6 +24,6 @@ export default createReducer<PlaybackState, PlaybackActions>(INITIAL_STATE)
   .handleAction(actions.tune, (state, action) => {
     return {
       ...state,
-      volume: action.payload.id,
+      id: action.payload.id,
     };
   });

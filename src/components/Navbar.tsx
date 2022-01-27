@@ -1,11 +1,13 @@
 import React from 'react';
+import { connect, ConnectedProps } from 'react-redux';
 
 import { ReactComponent as Sun } from '../icons/sun.svg';
 import { ReactComponent as Moon } from '../icons/moon.svg';
 
+import { actions } from '../redux';
 import { Theme } from '../types';
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<ConnectedProps<typeof connector>> = ({ tune }) => {
   const classNames = styles();
   const [theme, setTheme] = React.useState<Theme>('DARK');
 
@@ -17,7 +19,9 @@ const Navbar: React.FC = () => {
       document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
     }
-  }, [theme]);
+
+    tune('TtqTG6');
+  }, [theme, tune]);
 
   return (
     <nav className={classNames.root}>
@@ -39,4 +43,8 @@ const styles = () => {
   };
 };
 
-export default Navbar;
+const connector = connect(null, {
+  tune: actions.playback.tune,
+});
+
+export default connector(Navbar);

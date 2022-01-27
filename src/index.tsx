@@ -8,13 +8,17 @@ import Redux from './redux';
 
 import './index.css';
 
-const store = Redux.initializeStore();
+function initRedux() {
+  const store = Redux.initializeStore();
+  
+  Redux.initializeSagas();
 
-Redux.initializeSagas();
+  return store;
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={initRedux()}>
       <App />
     </Provider>
   </React.StrictMode>,

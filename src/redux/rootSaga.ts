@@ -1,13 +1,12 @@
 import { all, delay, fork } from 'redux-saga/effects';
 
-function* hello() {
-  yield delay(5000);
+import playbackSaga from './playback/sagas';
 
-  console.log('HELLLLO');
-}
 
 function* rootSaga() {
-  yield all([fork(hello)]);
+  yield all([
+    fork(playbackSaga),
+  ]);
 }
 
 export default rootSaga;

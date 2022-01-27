@@ -1,7 +1,7 @@
 import { createAction } from 'typesafe-actions';
 
 // initial play
-export const tune = createAction('tune', (id: number) => ({ id }))();
+export const tune = createAction('tune', (id: string) => ({ id }))();
 
 // audio
 export const start = createAction('start')();
