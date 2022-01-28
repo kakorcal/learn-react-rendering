@@ -9,7 +9,7 @@ export const selectAnnotations = (state: State) => {
   return state.tracks.annotations;
 };
 
-export const selectAnnotationById = (state: State, id: string): Track => {
+export const selectAnnotationById = (state: State, id: string): Track | undefined => {
   return state.tracks.annotations[id];
 };
 

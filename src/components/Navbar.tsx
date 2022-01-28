@@ -19,13 +19,16 @@ const Navbar: React.FC<ConnectedProps<typeof connector>> = ({ tune }) => {
       document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
     }
+  }, [theme]);
 
+  const onClick = () => {
     tune('TtqTG6');
-  }, [theme, tune]);
+  };
 
   return (
     <nav className={classNames.root}>
       <div className={classNames.logo}>SXM+P</div>
+      <button onClick={onClick}>PLAY</button>
       <button className={classNames.themeButton} type='button' onClick={() => setTheme(theme === 'LIGHT' ? 'DARK' : 'LIGHT')}>
         {theme === 'LIGHT' ? <Sun className={classNames.sunIcon} /> : <Moon className={classNames.moonIcon} />}
       </button>

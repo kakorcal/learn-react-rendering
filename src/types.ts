@@ -26,3 +26,5 @@ export type Tracks = {
 export type TrackIds = string[];
 
 export type SortType = 'ALPHABETICAL' | 'DATE-ADDED-NEWEST' | 'DATE-ADDED-OLDEST';
+
+export type HowlerEventTypes = 'play' | 'playerror' | 'end' | 'pause' | 'stop' | 'mute' | 'volume' | 'rate' | 'seek' | 'fade' | 'unlock' | 'load' | 'loaderror';
