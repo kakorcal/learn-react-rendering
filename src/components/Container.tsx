@@ -30,11 +30,11 @@ const styles = (containerType: ContainerType) => {
   const containerStyles: { [key in ContainerType]: { [key: string]: string; } } = {
     'HEADER': {
       root: 'w-full sticky z-10 top-0 bg-blue-200 dark:bg-blue-800 transition-colors',
-      container: 'max-w-6xl mx-auto',
+      container: 'max-w-7xl mx-auto',
     },
     'MAIN': {
       root: 'w-full py-12',
-      container: 'max-w-6xl mx-auto grid grid-cols-[5fr_2fr] gap-8',
+      container: 'max-w-7xl mx-auto grid grid-cols-[3fr_1fr] gap-8',
     },
   };
 

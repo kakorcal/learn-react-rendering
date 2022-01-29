@@ -55,8 +55,8 @@ const styles = () => {
     sortList: 'absolute mt-3 top-[100%] -right-2 list-none p-0 rounded overflow-hidden drop-shadow-xl w-full bg-slate-200 dark:bg-slate-600',
     sortListItem: 'flex m-0 p-0 w-full py-2 pl-4 pr-3 hover:bg-slate-400 dark:hover:bg-slate-800',
     sortListItemSelected: 'flex m-0 p-0 w-full py-2 pl-4 pr-3 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 dark:hover:bg-slate-800',
-    checkIcon: 'w-[2rem] opacity-0',
-    checkIconSelected: 'w-[2rem] fill-orange-500 dark:fill-yellow-500',
+    checkIcon: 'max-w-[2rem] opacity-0',
+    checkIconSelected: 'max-w-[2rem] fill-orange-500 dark:fill-yellow-500',
   };
 };
 

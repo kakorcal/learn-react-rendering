@@ -28,7 +28,7 @@ const Navbar: React.FC<ConnectedProps<typeof connector>> = ({ tune }) => {
   return (
     <nav className={classNames.root}>
       <div className={classNames.logo}>SXM+P</div>
-      <button onClick={onClick}>PLAY</button>
+      {/* <button onClick={onClick}>PLAY</button> */}
       <button className={classNames.themeButton} type='button' onClick={() => setTheme(theme === 'LIGHT' ? 'DARK' : 'LIGHT')}>
         {theme === 'LIGHT' ? <Sun className={classNames.sunIcon} /> : <Moon className={classNames.moonIcon} />}
       </button>
