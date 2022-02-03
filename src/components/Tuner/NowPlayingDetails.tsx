@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 
-import { State } from '../../redux';
+import { State, selectors } from '../../redux';
 import Image from '../Image';
 
 interface INowPlayingDetailsProps extends ConnectedProps<typeof connector> {}
@@ -29,18 +29,16 @@ const styles = () => {
   return {
     root: 'w-full',
     contentSection: 'w-full grid gap-1 p-3',
-    title: 'm-0 text-2xl',
-    subtitle: 'm-0 text-base',
+    title: 'm-0 text-2xl truncate',
+    subtitle: 'm-0 text-base truncate',
     image: 'w-full m-0',
-    children: 'mt-5 grid gap-2',
+    children: 'mt-5 grid gap-3',
   };
 };
 
 const connector = connect((state: State) => {
-  const nowPlaying = state.playback.id;
-  const track = nowPlaying ? state.tracks.annotations[nowPlaying] : state.tracks.annotations[state.tracks.ids[0]];
-
-  return track;
+  const id = selectors.playback.selectId(state);
+  return state.tracks.annotations[id];
 });
 
 export default connector(NowPlayingDetails);

@@ -5,9 +5,11 @@ import { devToolsEnhancer } from 'redux-devtools-extension';
 import rootReducer, { RootState } from './rootReducer';
 import rootActions from './rootActions';
 import rootSaga from './rootSaga';
+import rootSelectors from './rootSelectors';
 
 export type State = RootState;
 export const actions = rootActions;
+export const selectors = rootSelectors;
 
 const sagaMiddleware = createSagaMiddleware();
 

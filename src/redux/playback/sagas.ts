@@ -79,8 +79,9 @@ function* handlePlaybackEvents(audioPlayer: AudioPlayer) {
       console.log('handlePlaybackEvents: EVENT TYPE', howlerEventType);
 
       if (howlerEventType === 'load') {
-        console.log('handlePlaybackEvents: PLAY');
         audioPlayer.track?.play();
+      } else if (howlerEventType === 'play') {
+        yield put(actions.start());
       }
     }
   } finally {

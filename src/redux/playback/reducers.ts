@@ -20,11 +20,10 @@ export const INITIAL_STATE: PlaybackState = {
   volume: 50,
 };
 
-export default createReducer<PlaybackState, PlaybackActions>(INITIAL_STATE);
-
-  // .handleAction(actions.tune, (state, action) => {
-  //   return {
-  //     ...state,
-  //     id: action.payload.id,
-  //   };
-  // });
+export default createReducer<PlaybackState, PlaybackActions>(INITIAL_STATE)
+  .handleAction(actions.start, (state) => {
+    return {
+      ...state,
+      status: 'PLAYING',
+    };
+  });

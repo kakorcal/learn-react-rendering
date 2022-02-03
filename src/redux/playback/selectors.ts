@@ -1,7 +1,7 @@
 import { State } from '../index';
 
 export const selectId = (state: State) => {
-  return state.playback.id;
+  return state.playback.id || state.tracks.ids[0];
 };
 
 export const selectStatus = (state: State) => {
