@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .inputRange {
+    -webkit-appearance: none;
+
+    @apply max-h-[0.5rem] bg-slate-400 dark:bg-slate-300 rounded;
+  }
+  
+  .inputRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+
+    @apply w-[1.2rem] h-[1.2rem] bg-orange-500 dark:bg-yellow-500;
+  }
+  
+  .inputRange::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+}

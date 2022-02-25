@@ -3,6 +3,7 @@ import React from 'react';
 import NowPlayingDetails from './NowPlayingDetails';
 import ProgressBar from './ProgressBar';
 import PlaybackControls from './PlaybackControls';
+import VolumeControl from './VolumeControl';
 
 const Tuner: React.FC = () => {
   const classNames = styles();
@@ -12,6 +13,7 @@ const Tuner: React.FC = () => {
       <NowPlayingDetails>
         <ProgressBar />
         <PlaybackControls />
+        <VolumeControl />
       </NowPlayingDetails>
     </div>
   );

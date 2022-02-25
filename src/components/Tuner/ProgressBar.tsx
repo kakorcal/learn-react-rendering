@@ -18,7 +18,7 @@ const ProgressBar: React.FC = () => {
 
 const styles = () => {
   return {
-    root: 'w-full flex',
+    root: 'w-full flex mb-1',
     currentTime: 'text-xs mr-3',
     endTime: 'text-xs ml-3',
     progressSection: 'relative flex-1 flex items-center',
